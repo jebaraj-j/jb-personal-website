@@ -22,13 +22,13 @@ JOBS = [{
 
 @app.route("/")
 def hello_world():
-  return render_template("home.html", jobs=JOBS)
+    return render_template("home.html", jobs=JOBS)
 
 
 @app.route("/api/jobs")
 def list_jobs():
-  return jsonify(JOBS)
+    return jsonify(JOBS)
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True)
